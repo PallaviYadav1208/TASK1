@@ -10,33 +10,33 @@ AIM: TO PREDICT THE PERCENTAGE OF STUDENT BASED ON THE NO. OF HOURS OF STUDY AND
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 
-##### reading data from web<br>
+##### Reading data from web<br>
 >url="http://bit.ly/w-data"<br>
 data=pd.read_csv(url)<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173022920-a0c96410-691f-4e5a-957a-6e691df85f27.png)
 
-> #checking the shape of dataset<br>
+#### Checking the shape of dataset<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173022516-95068989-dc68-42c1-85a4-9df25a18c4d9.png)
 
->#checking for information of data<br>
+#### Checking for information of data<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173073239-9e2b302a-5016-44b5-94ae-75b2a142967c.png)
 
-> #describing the data<br>
+#### Describing the data<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173073445-d4b6ef1f-27da-480a-925f-cb02264a5ea6.png)
 
->#cheching for missing value<br>
+#### Checking for missing value<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173073710-183a9d80-0b85-4927-9b01-010e465c4538.png)
 
 Since there are no missing values in the dataset, Data Cleaning is not required.
 
 ## DATA VISUALIZATION
-> #Plotting the graph between hours studied and Scores obtained<br>
-x=data['Hours'].values.reshape(-1,1)<br>
+#### Plotting the graph between hours studied and Scores obtained<br>
+>x=data['Hours'].values.reshape(-1,1)<br>
 y=data['Scores'].values.reshape(-1,1)<br>
 plt.figure(figsize=(13,7))<br>
 plt.scatter(x, y, color="firebrick",marker="o")<br>  
@@ -67,13 +67,13 @@ model.fit(x_train, y_train) <br>
 model.intercept_<br>
 model.coef_<br>
 
->#Plotting the regression line<br>
-line = model.coef_*x_train+model.intercept_<br>
+#### Plotting the regression line<br>
+>line = model.coef_*x_train+model.intercept_<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173075682-4c8c483c-e4ac-401d-9116-55d90c635a3e.png)
 
-#Plotting for the given dataset<br>
-plt.figure(figsize=(13,7))<br>
+#### Plotting for the given dataset<br>
+>plt.figure(figsize=(13,7))<br>
 plt.scatter(x, y,label="Score",color="firebrick",marker="o")<br>
 plt.plot(x_train, line,label="Regression Line",color="firebrick")<br>
 plt.title("Study Hours  VS Score")<br>
@@ -92,8 +92,8 @@ y_pred<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173076413-b0f3cdb9-9210-4a01-981a-07b89b69b34b.png)
 
->#Comparing Actual vs Predicted scores for test dataset<br>
-df = pd.DataFrame(np.c_[x_test,y_test,y_pred],columns=["Hours","Actual Score","Predicted Score"])  <br>
+#### Comparing Actual vs Predicted scores for test dataset<br>
+>df = pd.DataFrame(np.c_[x_test,y_test,y_pred],columns=["Hours","Actual Score","Predicted Score"])  <br>
 df <br>
 ![image](https://user-images.githubusercontent.com/97663851/173076658-43571bb0-bb9f-4902-b635-c82064737968.png)
 
@@ -108,9 +108,8 @@ print("Predicted Score = ",pred)<br>
 ![image](https://user-images.githubusercontent.com/97663851/173076908-e9bde5c9-1a69-4d1a-be78-521bea29998e.png)
 
 ## EVALUATING THE MODEL
->#Checking the error<br>
-from sklearn import metrics <br> 
-
+#### Checking the error<br>
+>from sklearn import metrics <br> 
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred)) <br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173104981-e82d431f-2669-492f-ad8c-174b202a229d.png)<br>
