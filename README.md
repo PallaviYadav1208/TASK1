@@ -107,9 +107,6 @@ print("Predicted Score = ",pred)<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173076908-e9bde5c9-1a69-4d1a-be78-521bea29998e.png)
 
-
-
-
 ## EVALUATING THE MODEL
 >#Checking the error<br>
 from sklearn import metrics <br> 
