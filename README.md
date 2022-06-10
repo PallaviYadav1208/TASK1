@@ -110,9 +110,10 @@ print("Predicted Score = ",pred)<br>
 ## EVALUATING THE MODEL
 >#Checking the error<br>
 from sklearn import metrics <br> 
+
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred)) <br>
 
-![image](https://user-images.githubusercontent.com/97663851/173077166-ca77e820-1d6a-43c7-b967-d7646c54c7e8.png)
+![image](https://user-images.githubusercontent.com/97663851/173104981-e82d431f-2669-492f-ad8c-174b202a229d.png)<br>
 
 ![image](https://user-images.githubusercontent.com/97663851/173077306-f6c00511-a4f3-481c-9104-9bffef349e35.png)<br>
 Model-Score : 0.9735538080811826
