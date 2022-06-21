@@ -118,7 +118,7 @@ print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred)) <br>
 Model-Score : 0.9735538080811826
 This shows that our model gives 97.355% accurate results, which is good.
 
-INTERPRETATION : If the student studies for 9.25 hrs/day, then according to our model he/she can get a score of 97.35%
+INTERPRETATION : If the student studies for 9.25 hrs/day, then according to our model he/she can get a score of 93.46%
 
 THANK YOU
 
